@@ -1,5 +1,6 @@
 package com.example.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        //final Button button = findViewById(R.id.button);
     }
 
     @Override
@@ -48,5 +51,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onButtonClick(View v) {
+        Intent i = new Intent(getApplicationContext(), TermEdit.class);
+        startActivity(i);
     }
 }
