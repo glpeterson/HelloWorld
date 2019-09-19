@@ -7,4 +7,12 @@
     <string name="button_add_class">Add Class</string>
     <string name="button_remove_class">Remove Class</string>
     <string name="button_new_class">New Class</string>
+    <string name="title_activity_course_edit">course_edit</string>
+    <string name="button_add_assessment">Add</string>
+    <string name="button_remove_assessment">Remove</string>
+    <string name="button_new_assessment">New</string>
+    <string name="button_new">New</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_delete">Delete</string>
+    <string name="title_activity_assessment_edit">assessment_edit</string>
 </resources>

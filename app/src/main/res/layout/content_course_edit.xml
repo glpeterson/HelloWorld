@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".course_edit"
+    tools:showIn="@layout/activity_course_edit">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="-255dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/lblTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Title"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="61dp" />
+
+                <EditText
+                    android:id="@+id/lblStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Start Date"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="114dp" />
+
+                <EditText
+                    android:id="@+id/editStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="251dp" />
+
+                <EditText
+                    android:id="@+id/lblEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Anticipated End Date"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+                <EditText
+                    android:id="@+id/editEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+                <EditText
+                    android:id="@+id/lblMentorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Mentor Name"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+                <EditText
+                    android:id="@+id/editMentorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+                <EditText
+                    android:id="@+id/lblMentorPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Mentor Phone"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+                <EditText
+                    android:id="@+id/editMentorPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+                <EditText
+                    android:id="@+id/lblMentorEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Mentor E-mail"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="205dp" />
+
+                <EditText
+                    android:id="@+id/editMentorEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="368dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/NoteList"
+                android:layout_width="365dp"
+                android:layout_height="146dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TableLayout
+                android:layout_width="366dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="94dp">
+
+                    <Button
+                        android:id="@+id/btnNewNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_new"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                    <Button
+                        android:id="@+id/btnEditNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_edit"
+                        tools:layout_editor_absoluteX="114dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                    <Button
+                        android:id="@+id/btnDeleteNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_delete"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/AssessmentList"
+                android:layout_width="365dp"
+                android:layout_height="146dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <Spinner
+                android:id="@+id/spinnerAssessment"
+                android:layout_width="368dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+            <TableLayout
+                android:layout_width="366dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="94dp">
+
+                    <Button
+                        android:id="@+id/btnAddAssessment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_add_assessment"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                    <Button
+                        android:id="@+id/btnRemoveAssessment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_remove_assessment"
+                        tools:layout_editor_absoluteX="114dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                    <Button
+                        android:id="@+id/btnNewAssessment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_new_assessment"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="563dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="366dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/button_save"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="611dp" />
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@android:string/cancel"
+                        tools:layout_editor_absoluteX="114dp"
+                        tools:layout_editor_absoluteY="611dp" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
