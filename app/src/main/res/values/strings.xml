@@ -15,4 +15,5 @@
     <string name="button_edit">Edit</string>
     <string name="button_delete">Delete</string>
     <string name="title_activity_assessment_edit">assessment_edit</string>
+    <string name="title_activity_term_view">term_view</string>
 </resources>

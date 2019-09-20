@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -54,7 +56,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), TermEdit.class);
+        Intent i = new Intent(getApplicationContext(), term_view.class);
         startActivity(i);
+    }
+
+    public static class Lists {
+        public static ArrayList<Term> TermList = new ArrayList<Term>();
+        public static ArrayList<Course> CourseList = new ArrayList<Course>();
+
+        public static String[] GetTermList() {
+            ArrayList<String> terms = new ArrayList<>();
+
+            for (int i = 0; i < TermList.size(); i++) {
+                terms.add(TermList.get(i).Title());
+            }
+
+            if (terms.isEmpty()) {
+                terms.add("");
+            }
+
+            return terms.toArray(new String[terms.size()]);
+        }
     }
 }

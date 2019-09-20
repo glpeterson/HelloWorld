@@ -161,6 +161,7 @@
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
+                android:onClick="onSaveButtonClick"
                 android:text="@string/button_save"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="611dp" />
