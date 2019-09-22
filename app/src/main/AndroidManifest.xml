@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".course_view"
+            android:label="@string/title_activity_course_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".term_view"
             android:label="@string/title_activity_term_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".assessment_edit"
             android:label="@string/title_activity_assessment_edit"

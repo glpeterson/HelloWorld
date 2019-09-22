@@ -35,4 +35,18 @@ public class Assessment implements Comparable<Assessment> {
     public int compareTo(Assessment assessment) {
         return this.title.compareTo(assessment.title);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Assessment a = (Assessment) o;
+
+        return a.Title().equals(this.Title());
+    }
 }

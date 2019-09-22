@@ -8,22 +8,27 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="91dp">
+
+        <Button
+        android:id="@+id/buttonTermView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="onTermsButtonClick"
+        android:text="Terms" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onButtonClick"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="414dp" />
-
+        <Button
+            android:id="@+id/buttonCourseView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCoursesButtonClick"
+            android:text="Courses" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

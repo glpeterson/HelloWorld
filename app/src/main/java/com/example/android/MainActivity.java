@@ -55,8 +55,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onButtonClick(View v) {
+    public void onTermsButtonClick(View v) {
         Intent i = new Intent(getApplicationContext(), term_view.class);
+        startActivity(i);
+    }
+
+    public void onCoursesButtonClick(View v) {
+        Intent i = new Intent(getApplicationContext(), course_view.class);
         startActivity(i);
     }
 
@@ -76,6 +81,34 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return terms.toArray(new String[terms.size()]);
+        }
+
+        public static String[] GetCourseList() {
+            ArrayList<String> courses = new ArrayList<>();
+
+            for (int i = 0; i < CourseList.size(); i++) {
+                courses.add(CourseList.get(i).Title());
+            }
+
+            if (courses.isEmpty()) {
+                courses.add("");
+            }
+
+            return courses.toArray(new String[courses.size()]);
+        }
+
+        public static Course getCourse(String title) {
+            Course course = null;
+            Course tempCourse;
+
+            for (int i = 0; i < CourseList.size(); i++) {
+                tempCourse = CourseList.get(i);
+                if (tempCourse.Title().equals(title)) {
+                    course = tempCourse;
+                }
+            }
+
+            return course;
         }
     }
 }

@@ -8,6 +8,10 @@ public class Term implements Comparable<Term> {
     private Date endDate;
     private ArrayList<Course> courseList;
 
+    public Term() {
+        courseList = new ArrayList<>();
+    }
+
     public void Title(String title) {
         this.title = title;
     }
@@ -56,8 +60,36 @@ public class Term implements Comparable<Term> {
         return (ArrayList<Course>)courseList.clone();
     }
 
+    public String[] getCourseTitles() {
+        ArrayList<String> courses = new ArrayList<>();
+
+        for (int i = 0; i < courseList.size(); i++) {
+            courses.add(courseList.get(i).Title());
+        }
+
+        if (courses.isEmpty()) {
+            courses.add("");
+        }
+
+        return courses.toArray(new String[courses.size()]);
+    }
+
     @Override
     public int compareTo(Term term) {
         return this.title.compareTo(term.title);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Term t = (Term) o;
+
+        return t.Title().equals(this.Title());
     }
 }

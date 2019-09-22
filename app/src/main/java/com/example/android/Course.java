@@ -11,7 +11,12 @@ public class Course implements Comparable<Course> {
     private String mentorPhone;
     private String mentorEmail;
     private ArrayList<Assessment> assessmentList;
-    private Dictionary<String, String> notes;
+    private Map<String, String> notes;
+
+    public Course() {
+        assessmentList = new ArrayList<>();
+        notes = new HashMap<>();
+    }
 
     public String Title() {
         return title;
@@ -69,7 +74,40 @@ public class Course implements Comparable<Course> {
         this.mentorEmail = mentorEmail;
     }
 
+    public String[] getAssessmentTitles() {
+        ArrayList<String> assessments = new ArrayList<>();
+
+        for (int i = 0; i < assessmentList.size(); i++) {
+            assessments.add(assessmentList.get(i).Title());
+        }
+
+        if (assessments.isEmpty()) {
+            assessments.add("");
+        }
+
+        return assessments.toArray(new String[assessments.size()]);
+    }
+
+    public String[] getNoteTitles() {
+        return notes.keySet().toArray(new String[notes.keySet().size()]);
+    }
+
+    @Override
     public int compareTo(Course comp) {
         return comp.title.compareTo(title);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Course c = (Course) o;
+
+        return c.Title().equals(this.Title());
     }
 }

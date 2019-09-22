@@ -61,7 +61,7 @@
             tools:layout_editor_absoluteY="251dp" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerCourse"
             android:layout_width="368dp"
             android:layout_height="28dp"
             android:layout_marginStart="8dp"
@@ -71,7 +71,7 @@
             android:layout_marginRight="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerCourses" />
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -86,7 +86,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner">
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCourse">
 
             <TableRow
                 android:layout_width="match_parent"

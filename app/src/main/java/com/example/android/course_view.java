@@ -10,7 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class term_view extends AppCompatActivity {
+public class course_view extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ViewAdapter rvAdapater;
@@ -19,15 +19,15 @@ public class term_view extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_term_view);
+        setContentView(R.layout.activity_course_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerTerms);
+        recyclerView = findViewById(R.id.cvRecyclerCourses);
         rvLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(rvLayoutManager);
 
-        rvAdapater = new ViewAdapter(MainActivity.Lists.GetTermList());
+        rvAdapater = new ViewAdapter(MainActivity.Lists.GetCourseList());
         recyclerView.setAdapter(rvAdapater);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -41,7 +41,7 @@ public class term_view extends AppCompatActivity {
     }
 
     public void onNewButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), TermEdit.class);
+        Intent i = new Intent(getApplicationContext(), course_edit.class);
         i.putExtra("position", -1);
         startActivityForResult(i,0);
     }
@@ -50,7 +50,7 @@ public class term_view extends AppCompatActivity {
         int position = rvAdapater.getSelectedItem();
 
         if (rvAdapater.getItemCount() > 0) {
-            Intent i = new Intent(getApplicationContext(), TermEdit.class);
+            Intent i = new Intent(getApplicationContext(), course_edit.class);
             i.putExtra("position", position);
             startActivityForResult(i, 0);
         }
@@ -61,7 +61,7 @@ public class term_view extends AppCompatActivity {
 
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-                rvAdapater.updateList(MainActivity.Lists.GetTermList());
+                rvAdapater.updateList(MainActivity.Lists.GetCourseList());
                 rvAdapater.notifyDataSetChanged();
             }
         }

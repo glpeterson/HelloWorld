@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".term_view"
-    tools:showIn="@layout/activity_term_view">
+    tools:context=".course_view"
+    tools:showIn="@layout/activity_course_view">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="91dp">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerTerms"
+            android:id="@+id/cvRecyclerCourses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true" />
@@ -30,41 +30,25 @@
                 android:layout_height="match_parent" >
 
                 <Button
-                    android:id="@+id/buttonNew"
+                    android:id="@+id/cvButtonNew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onNewButtonClick"
                     android:text="@string/button_new" />
 
                 <Button
-                    android:id="@+id/buttonEdit"
+                    android:id="@+id/cvButtonEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onEditButtonClick"
                     android:text="@string/button_edit" />
 
                 <Button
-                    android:id="@+id/buttonDelete"
+                    android:id="@+id/cvButtonDelete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/button_delete" />
             </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </TableLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
